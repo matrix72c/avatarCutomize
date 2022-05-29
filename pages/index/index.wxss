@@ -1,0 +1,22 @@
+/**index.wxss**/
+page {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  padding: 0;
+}
+.bg {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  position: absolute;
+  top: 65%;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+}

@@ -1,0 +1,52 @@
+<!--gen.wxml-->
+<view class="container">
+  <view class="bg" >
+    <image 
+      src="/asset/bg.jpg"
+      style="height: 100%;width: 100%;">
+    </image>
+  </view>
+  <view class="canvasView">
+    <canvas canvas-id="shareImg" style="width:100%;height: 100%;" hidden="{{!isStart}}"></canvas>
+    <image 
+      src="/asset/标题框.png"
+      style="height: 100%;width: 100%;"
+      bindtap="getAvatar"
+      hidden="{{isStart}}">
+    </image>
+  </view>
+  <view class="starts" hidden="{{isStart}}">
+    <image 
+      src="/asset/开始创作.png"
+      style="width: 100%;height: 120rpx;margin-bottom: 30rpx;"
+      hidden="{{isStart}}"
+      bindtap="startGen">
+    </image>
+    <image 
+      src="/asset/选择相册照片.png"
+      style="width: 100%;height: 120rpx;"
+      bindtap="getPhoto">
+    </image>
+  </view>
+  <view class="itemListContainer" hidden="{{!isStart}}">
+    <scroll-view scroll-x>
+      <view class="itemList" >
+        <view class="item" wx:for="{{list}}" wx:key="id">
+          <image bindtap='selectImg' data-id='{{item}}' data-src='/asset/头像框{{item}}.png' src="/asset/头像框{{item}}.png" mode='aspectFill'></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="create" hidden="{{!isStart}}">
+    <image 
+      src="/asset/保存头像.png"
+      style="width: 100%;height: 150rpx;"
+      bindtap="save">
+    </image>
+    <image 
+      src="/asset/分享.png"
+      style="width: 100%;height: 150rpx;"
+      bindtap="share">
+    </image>
+  </view>
+</view>

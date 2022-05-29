@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="bg" >
+    <image 
+      src="/asset/进入主界面.jpg"
+      style="height: 100%;width: 100%;">
+    </image>
+  </view>
+  <view class="btn" bindtap="jump">
+  </view>
+</view>
