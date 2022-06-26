@@ -1,19 +1,11 @@
 // app.js
 App({
-  onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-  },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    introPics: [
+      'https://6e6a-njupt-red-avatar-5fxugur2ac8fee7-1312231559.tcb.qcloud.la/%E4%BB%8B%E7%BB%8D%E9%95%BF%E5%9B%BE1.jpg?sign=c5bc5111f329ed9d899815486e5e1b26&t=1653896138',
+      'https://6e6a-njupt-red-avatar-5fxugur2ac8fee7-1312231559.tcb.qcloud.la/%E4%BB%8B%E7%BB%8D%E9%95%BF%E5%9B%BE2.jpg?sign=0d5efb34a98b27d8cd11c27c04d7a3b0&t=1653896151',
+      'https://6e6a-njupt-red-avatar-5fxugur2ac8fee7-1312231559.tcb.qcloud.la/%E4%BB%8B%E7%BB%8D%E9%95%BF%E5%9B%BE3.jpg?sign=5830a154c710b945d767ac8f5d44ac4c&t=1653896161'
+    ]
   }
 })

@@ -1,5 +1,4 @@
 {
-  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
   "packOptions": {
     "ignore": [],
     "include": []
@@ -45,11 +44,11 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
-  "appid": "wxf5670c75ac2bc221",
-  "projectname": "miniprogram-92",
+  "projectname": "njupt-red-avatar",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
 }

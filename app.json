@@ -1,13 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/gen/gen",
-    "pages/share/share"
+    "pages/gen/gen"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "南邮红色校史",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",

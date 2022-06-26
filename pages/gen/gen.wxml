@@ -1,52 +1,42 @@
 <!--gen.wxml-->
-<view class="container">
-  <view class="bg" >
-    <image 
-      src="/asset/bg.jpg"
-      style="height: 100%;width: 100%;">
+<view class="modalMask" bindtap="hideModal" hidden="{{hideModal}}"></view>
+<view class="modal" hidden="{{hideModal}}">
+  <view class="imgContainer">
+    <image src="{{posterUrl}}" show-menu-by-longpress="true" style="width:100%;height:100%;"></image>
+  </view>
+</view>
+<view class="container" style="height: {{screenHeight}}px;width: {{screenWidth}}px;">
+  <view class="bg" style="height: {{screenHeight}}px;width: {{screenWidth}}px;">
+    <image src="https://6e6a-njupt-red-avatar-5fxugur2ac8fee7-1312231559.tcb.qcloud.la/BG.jpg?sign=9c9138dbfc3ae702a41ee018eb2b5150&t=1653895376" style="width: 100%;height: 100%;">
     </image>
   </view>
   <view class="canvasView">
-    <canvas canvas-id="shareImg" style="width:100%;height: 100%;" hidden="{{!isStart}}"></canvas>
-    <image 
-      src="/asset/标题框.png"
-      style="height: 100%;width: 100%;"
-      bindtap="getAvatar"
-      hidden="{{isStart}}">
+    <canvas canvas-id="genImg" style="width:100%;height: 100%;" hidden="{{hideCanvas}}"></canvas>
+    <image src="https://6e6a-njupt-red-avatar-5fxugur2ac8fee7-1312231559.tcb.qcloud.la/%E6%A0%87%E9%A2%98%E6%A1%86.png?sign=ea2313e0333146428e8e3424e4124e92&t=1653895358" style="height: 100%;width: 100%;" bindtap="getAvatar" hidden="{{hasPhoto}}">
     </image>
   </view>
   <view class="starts" hidden="{{isStart}}">
-    <image 
-      src="/asset/开始创作.png"
-      style="width: 100%;height: 120rpx;margin-bottom: 30rpx;"
-      hidden="{{isStart}}"
-      bindtap="startGen">
+    <image src="https://6e6a-njupt-red-avatar-5fxugur2ac8fee7-1312231559.tcb.qcloud.la/%E5%BC%80%E5%A7%8B%E5%88%9B%E4%BD%9C.png?sign=5d7060009981dc27b981f27a88024e0b&t=1653895335" style="width: 100%;height: 120rpx;margin-bottom: 30rpx;" hidden="{{isStart}}" bindtap="startGen" mode="aspectFit">
     </image>
-    <image 
-      src="/asset/选择相册照片.png"
-      style="width: 100%;height: 120rpx;"
-      bindtap="getPhoto">
+    <image src="https://6e6a-njupt-red-avatar-5fxugur2ac8fee7-1312231559.tcb.qcloud.la/%E9%80%89%E6%8B%A9%E7%9B%B8%E5%86%8C%E7%85%A7%E7%89%87.png?sign=c0cf1e95bceff8c3caed71585f6078c9&t=1653895301" style="width: 100%;height: 120rpx;" bindtap="getPhoto" mode="aspectFit">
     </image>
   </view>
   <view class="itemListContainer" hidden="{{!isStart}}">
     <scroll-view scroll-x>
-      <view class="itemList" >
+      <view class="itemList">
         <view class="item" wx:for="{{list}}" wx:key="id">
-          <image bindtap='selectImg' data-id='{{item}}' data-src='/asset/头像框{{item}}.png' src="/asset/头像框{{item}}.png" mode='aspectFill'></image>
+          <image bindtap='selectImg' data-id='{{index}}' data-src='{{item}}' src="{{item}}" mode='aspectFill'></image>
         </view>
       </view>
     </scroll-view>
   </view>
   <view class="create" hidden="{{!isStart}}">
-    <image 
-      src="/asset/保存头像.png"
-      style="width: 100%;height: 150rpx;"
-      bindtap="save">
+    <image src="https://6e6a-njupt-red-avatar-5fxugur2ac8fee7-1312231559.tcb.qcloud.la/%E4%BF%9D%E5%AD%98%E5%A4%B4%E5%83%8F.png?sign=879a678b975c16b4269ef448064c6e39&t=1653895414" style="width: 100%;height: 150rpx;" bindtap="save">
     </image>
-    <image 
-      src="/asset/分享.png"
-      style="width: 100%;height: 150rpx;"
-      bindtap="share">
+    <image src="https://6e6a-njupt-red-avatar-5fxugur2ac8fee7-1312231559.tcb.qcloud.la/%E5%88%86%E4%BA%AB.png?sign=cdf14e231c94a56d52d81d9e16dd17e9&t=1653895427" style="width: 100%;height: 150rpx;" bindtap="share">
     </image>
   </view>
+
+  <canvas canvas-id="shareImg" style="width: 100%; height: 100%;position:fixed;left:100%;"></canvas>
 </view>
+<image src="{{introUrl}}" mode="widthFix" style="width: {{screenWidth}}px;" show-menu-by-longpress="true" hidden="{{!isStart}}"></image>

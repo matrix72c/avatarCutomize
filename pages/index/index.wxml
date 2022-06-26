@@ -2,7 +2,7 @@
 <view class="container">
   <view class="bg" >
     <image 
-      src="/asset/进入主界面.jpg"
+      src="https://6e6a-njupt-red-avatar-5fxugur2ac8fee7-1312231559.tcb.qcloud.la/%E8%BF%9B%E5%85%A5%E4%B8%BB%E7%95%8C%E9%9D%A2.jpg?sign=b6e7940b83aeff64a174a6f0fa7d72ae&t=1653895443"
       style="height: 100%;width: 100%;">
     </image>
   </view>
